@@ -1,0 +1,84 @@
+Netflix Data Visualization Project
+📌 Project Overview
+
+This project analyzes a Netflix dataset using Python, Pandas, and Matplotlib.
+
+The main goal is to understand Netflix content based on:
+
+Movies vs TV Shows
+Content ratings
+Movie duration
+Release years
+Countries producing Netflix content
+Movies and TV Shows released over the years
+
+The project also creates different visualizations and saves them as PNG images.
+
+🛠️ Technologies Used
+Python
+Pandas
+Matplotlib
+CSV Dataset
+
+
+📂 Dataset
+
+The project uses:
+
+netflix_similar_dataset.csv
+
+The dataset contains information about Netflix movies and TV shows, including:
+
+Type
+Release Year
+Rating
+Country
+Duration
+
+
+📊 Visualizations
+1. Movies vs TV Shows
+
+A bar chart shows the number of Movies and TV Shows available in the dataset.
+
+Output:
+movies_vs_tvshows.png
+
+2. Content Ratings
+
+A pie chart shows the percentage of content based on different ratings.
+
+Output:
+content_Ratings_pie.png
+
+3. Movie Duration
+
+A histogram shows the distribution of movie durations in minutes.
+
+The project converts durations such as:
+2h 15m → 135 minutes
+120 min → 120 minutes
+
+Output:
+movie_duration_histogram.png
+
+4. Release Year Analysis
+
+A scatter plot shows the number of Netflix titles released in each year.
+
+Output:
+release_year_Scatter.png
+
+5. Top 10 Countries
+
+A horizontal bar chart shows the top 10 countries by number of Netflix titles.
+
+Output:
+top10_countries.png
+
+6. Movies vs TV Shows by Year
+
+A line chart compares the number of Movies and TV Shows released over different years.
+
+Output:
+movies_tv_shows_comparison.png
