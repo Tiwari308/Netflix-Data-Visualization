@@ -85,21 +85,33 @@ plt.savefig('top10_countries.png')
 plt.show()
 
 
+
 content_by_year = df.groupby(['release_year', 'type']).size().unstack().fillna(0)
 
-fig, ax = plt.subplot(1,2, figsize=(12,5))
+# Create 1 row and 2 columns of subplots
+fig, ax = plt.subplots(1, 2, figsize=(12, 5))
 
-ax[0].plot(content_by_year.index, content_by_year['Movie'], color='blue')
-ax[0].set_title('Movies Released per year')
-ax[0].set_xlable('year')
-ax[0].set_ylable('Number of Movies')
+# First plot: Movies
+ax[0].plot(
+    content_by_year.index,
+    content_by_year['Movie'],
+    color='blue'
+)
+ax[0].set_title('Movies Released per Year')
+ax[0].set_xlabel('Year')
+ax[0].set_ylabel('Number of Movies')
 
-ax[0].plot(content_by_year.index, content_by_year['Tv Show'], color='orange')
-ax[0].set_title('Tv Shows Released per year')
-ax[0].set_xlable('year')
-ax[0].set_ylable('Number of Movies')
+# Second plot: TV Shows
+ax[1].plot(
+    content_by_year.index,
+    content_by_year['TV Show'],
+    color='orange'
+)
+ax[1].set_title('TV Shows Released per Year')
+ax[1].set_xlabel('Year')
+ax[1].set_ylabel('Number of TV Shows')
 
-fig.suptitle('Comparison of Movies and Tv Shows Released Over year')
+fig.suptitle('Comparison of Movies and TV Shows Released Over Years')
 
 plt.tight_layout()
 plt.savefig('movies_tv_shows_comparison.png')
